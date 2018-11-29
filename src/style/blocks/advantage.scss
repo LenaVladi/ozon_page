@@ -1,0 +1,117 @@
+.advantage {
+  background-color: $background;
+}
+
+.advantage__inner {
+  @include inner;
+
+  padding-right: 110px;
+  padding-bottom: 76px;
+}
+
+.advantage__title {
+  @include title;
+}
+
+.advantage__list-container {
+  @include respond-to($mobile) {
+    padding-bottom: 50px;
+  }
+}
+
+.advantage__list {
+  @include ul_none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 90px;
+
+  @include respond-to($mobile) {
+    margin-top: 50px;
+    flex-wrap: nowrap;
+  }
+}
+
+.advantage__item {
+  width: 420px;
+  margin-right: 24px;
+  padding-right: 40px;
+  margin-bottom: 65px;
+
+  &:nth-child(1), &:nth-child(4) {
+    .advantage__item-title {
+      padding-right: 40px;
+    }
+  }
+
+  &:nth-child(3) {
+    padding-right: 0;
+  }
+
+  &:nth-child(5) {
+    padding-right: 100px;
+  }
+
+  &:nth-child(6) {
+    padding-right: 100px;
+    position: relative;
+
+    @include respond-to($hover) {
+      &:hover {
+        .icon-pdf__bg {
+          animation: swing 1.1s ease;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+  }
+
+  @include respond-to($desktop-s) {
+    width: 400px;
+    margin-right: 0;
+
+    .icon-pdf {
+      top: 50px;
+      right: 90px;
+    }
+  }
+
+
+  @include respond-to($tablet) {
+    width: 50%;
+    margin: 0;
+
+    .icon-pdf {
+      top: 45px;
+      right: 65px;
+    }
+  }
+
+  @include respond-to($mobile) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &:nth-child(5) {
+      padding-right: 0;
+    }
+
+    .icon-pdf {
+      top: 50px;
+      right: 0;
+    }
+  }
+}
+
+.advantage__item-title {
+  @include sub_title;
+
+}
+
+.advantage__pdf {
+  //style .icon-pdf
+}
+
+.advantage__item-desc {
+  margin-top: 0;
+}

@@ -1,0 +1,10 @@
+.footer {
+  background-color: $blue;
+}
+
+.footer__inner {
+  @include inner;
+
+  color: #fff;
+  padding-bottom: 80px;
+}

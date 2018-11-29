@@ -1,0 +1,76 @@
+$mobile: "(min-width: 320px) and (max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 959px)";
+$desktop: "(min-width: 960px)";
+$desktop-s: "(min-width: 960px) and (max-width: 1360px)";
+$non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)";
+$retina: "(min--moz-device-pixel-ratio: 1.5),
+		  (-o-min-device-pixel-ratio: 3/2),
+		  (-webkit-min-device-pixel-ratio: 1.5),
+		  (min-device-pixel-ratio: 1.5),
+		  (min-resolution: 144dpi),
+		  (min-resolution: 1.5dppx)";
+$hover: $desktop;
+
+@mixin respond-to($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+@mixin ul_none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin inner {
+  margin: 0 auto;
+  max-width: 1350px;
+  padding: 158px 134px 100px;
+
+  @include respond-to($tablet) {
+    max-width: 100%;
+    padding: 80px 20px 60px;
+  }
+
+  @include respond-to($mobile) {
+    max-width: 100%;
+    padding: 50px 15px 30px;
+  }
+}
+
+@mixin title {
+  font-size: 64px;
+  line-height: 1.14;
+  color: $title_color;
+  margin: 0 0 20px;
+
+  @include respond-to($desktop-s) {
+    font-size: 60px;
+  }
+
+  @include respond-to($tablet) {
+    font-size: 52px;
+  }
+
+  @include respond-to($mobile) {
+    font-size: 32px;
+  }
+}
+
+@mixin sub_title {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  color: $title_color;
+  margin: 0 0 10px;
+}
+
+@mixin btn_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: $transition;
+  position: relative;
+}

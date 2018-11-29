@@ -1,0 +1,74 @@
+.menu {
+  color: #fff;
+  height: 100%;
+  margin-left: 4%;
+
+  @include respond-to($mobile) {
+    color: $title_color;
+    height: auto;
+    margin: 0;
+  }
+}
+
+.menu__list {
+  @include ul_none;
+
+  display: flex;
+  height: 100%;
+
+  @include respond-to($mobile) {
+    flex-direction: column;
+    text-align: left;
+    padding-top: 20px;
+  }
+}
+
+.menu__item {
+  color: inherit;
+
+  @include respond-to($hover) {
+    &:hover .menu__link:after, &:hover .menu__link:before {
+      width: 50%;
+    }
+
+    &:hover .menu__link {
+      color: $background;
+    }
+  }
+}
+
+.menu__link {
+  @include btn_link;
+
+  color: inherit;
+  font-size: 18px;
+  padding: 14px;
+
+  &:after, &:before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: $background;
+    transition: $transition;
+  }
+
+  &:after {
+    left: 50%;
+  }
+
+  &:before {
+    right: 50%;
+  }
+
+  @include respond-to($tablet) {
+    font-size: 14px;
+  }
+
+  @include respond-to($mobile) {
+    font-weight: 800;
+  }
+}
+

@@ -1,0 +1,145 @@
+.gift__inner {
+  @include inner;
+
+  padding-bottom: 94px;
+}
+
+.gift__title {
+  @include title;
+
+  padding-right: 110px;
+
+  @include respond-to($mobile) {
+    padding-right: 0;
+  }
+}
+
+.gift__list-container {
+  margin-left: -35px;
+
+  @include respond-to($tablet) {
+    margin-left: 0;
+  }
+
+  @include respond-to($mobile) {
+    margin-left: 0;
+  }
+}
+
+.gift__list {
+  @include ul_none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 144px;
+
+  @include respond-to($tablet) {
+    margin-top: 84px;
+  }
+
+  @include respond-to($mobile) {
+    //flex-wrap: nowrap;
+    margin-top: 44px;
+  }
+}
+
+.gift__list-item {
+  width: 33%;
+  margin-bottom: 90px;
+
+  &:nth-child(2), &:nth-child(5) {
+    padding-left: 50px;
+
+    .gift__list-description {
+      padding-left: 60px;
+      padding-right: 30px;
+    }
+
+    @include respond-to($desktop-s) {
+      padding-left: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    padding-left: 130px;
+
+    .gift__list-description {
+      padding-left: 60px;
+      padding-right: 0;
+    }
+
+    @include respond-to($desktop-s) {
+      padding-left: 0;
+    }
+  }
+
+  @include respond-to($tablet) {
+    width: 50%;
+    margin-bottom: 60px;
+
+    &:nth-child(2), &:nth-child(5) {
+      padding-left: 0;
+
+      .gift__list-description {
+        padding-left: 0;
+        padding-right: 80px;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-left: 0;
+
+      .gift__list-description {
+        padding-left: 0;
+        padding-right: 80px;
+      }
+    }
+  }
+
+  @include respond-to($mobile) {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &:nth-child(2), &:nth-child(5) {
+      padding-left: 0;
+
+      .gift__list-description {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-left: 0;
+
+      .gift__list-description {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.gift__list-icon {
+  @include respond-to($desktop-s) {
+    height: 260px;
+  }
+
+  @include respond-to($tablet) {
+    height: 240px;
+  }
+
+  @include respond-to($mobile) {
+    height: 260px;
+    margin: 0 auto;
+  }
+}
+
+.gift__list-description {
+  padding: 0 80px 0 35px;
+
+  @include respond-to($mobile) {
+    padding: 0 20px;
+  }
+}

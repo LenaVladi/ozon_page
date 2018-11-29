@@ -1,0 +1,111 @@
+.icon-pdf {
+  position: absolute;
+  display: block;
+  width: 138px;
+  height: 90px;
+  right: 137px;
+  top: 52px;
+}
+
+.icon-pdf__block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 61px;
+  height: 57px;
+}
+
+.icon-pdf__block:before {
+  display: block;
+  content: "";
+  height: 26px;
+  width: 30px;
+  margin-left: 30px;
+  border-top: 1px solid $decorate;
+  border-left: 1px solid $decorate;
+  border-radius: 30px 0 0 0;
+}
+
+.icon-pdf__block:after {
+  display: block;
+  content: "";
+  width: 31px;
+  height: 31px;
+  border-right: 1px solid $decorate;
+  border-bottom: 1px solid $decorate;
+  border-radius: 0 0 40px 0;
+}
+
+.icon-pdf__point {
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: $decorate;
+  bottom: -1px;
+  left: -2px;
+}
+
+.icon-pdf__arrow {
+  display: block;
+  position: absolute;
+  top: -3px;
+  right: -2px;
+  width: 12px;
+  height: 1px;
+  background-color: $decorate;
+  transform: rotate(30deg);
+}
+
+.icon-pdf__arrow:before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 1px;
+  background-color: $decorate;
+  transform: rotate(-65deg);
+  position: absolute;
+  top: 6px;
+  right: -3px;
+}
+
+.icon-pdf__bg {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 68px;
+  background-image: url(../image/pdf_text.svg), url(../image/pdf_bg.svg);
+  background-repeat: no-repeat;
+  background-position: center, center;
+  transition: $transition;
+}
+
+@keyframes swing {
+  15% {
+    transform: translateY(9px);
+  }
+
+  30% {
+    transform: translateY(-9px);
+  }
+
+  40% {
+    transform: translateY(6px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  65% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
